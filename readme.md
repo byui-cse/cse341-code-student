@@ -22,3 +22,7 @@ The purpose of this activity is to help students practice writing tests for thei
 ### Stretch: Come Up With Your Own
 - Think about what other kinds of things you could test
 - Try adding some more routes to the project and writing tests for those as well
+
+### Run the Solution
+- Run ```npm install``` to install the dependencies
+- Run ``` npm run test``` to start the tests. Type ```a``` to run them again. Type ```ctrl+c``` to exit.
