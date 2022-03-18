@@ -22,3 +22,6 @@ The jest command runs your test scripts. The --watch option will have your tests
 - Also take a look at the docs for [jest](https://jestjs.io/) and [supertest](https://www.npmjs.com/package/supertest)
 - When you are finished, compare your solution with the get.spec.js and post.spec.js files in the sample solution.
 
+### Run the Solution
+- Run ```npm install``` to install the dependencies
+- Run ``` npm run test``` to start the tests. Type ```a``` to run them again. Type ```ctrl+c``` to exit.
