@@ -19,10 +19,16 @@ const professionalSchema = mongoose.Schema(
       required: [true, 'Link Title Text is required'],
     },
     linkedInLink: {
-      type: String,
-      required: [true, 'LinkedIn Link is required'],
+      text: {
+        type: String,
+        required: [true, 'LinkedIn Link Text is required'],
+      },
+      link: { type: String, required: [true, 'LinkedIn Link is required'] },
     },
-    githubLink: { type: String, required: [true, 'GitHub Link is required'] },
+    githubLink: {
+      text: { type: String, required: [true, 'GitHub Link Text is required'] },
+      link: { type: String, required: [true, 'GitHub Link is required'] },
+    },
   },
   {
     timestamps: true,

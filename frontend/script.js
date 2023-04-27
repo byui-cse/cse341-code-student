@@ -12,13 +12,15 @@ const getData = async () => {
 };
 
 function displayAllData(data) {
-  displayProfessionalName(data.professionalName);
-  displayImage(data.base64Image);
-  displayPrimaryDescription(data);
-  displayWorkDescription(data);
-  displayLinkTitleText(data);
-  displayLinkedInLink(data);
-  displayGitHubLink(data);
+  data.forEach((professional) => {
+    displayProfessionalName(professional.professionalName);
+    displayImage(professional.base64Image);
+    displayPrimaryDescription(professional);
+    displayWorkDescription(professional);
+    displayLinkTitleText(professional);
+    displayLinkedInLink(professional);
+    displayGitHubLink(professional);
+  });
 }
 
 function displayProfessionalName(n) {
