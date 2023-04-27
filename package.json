@@ -1,0 +1,11 @@
+{
+  "name": "cse341-code-student",
+  "version": "1.0.0",
+  "description": "This repository contains a collection of code for students that take the CSE 341 course at Brigham Young University - Idaho.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
