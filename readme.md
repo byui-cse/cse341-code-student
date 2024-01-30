@@ -13,11 +13,11 @@
   [https://localhost:8080?name=sarah](https://localhost:8080?name=sarah). This is just to give you practice designing a swagger api route without generating one from existing code. This will not connect to the database, and will consist of a very simple node api route.
 - Add the swagger route to your node project routes, and test it locally.
 - Push to GitHub
-- Create a new Heroku project, and connect it to your GitHub repository
+- Create a new Render project, and connect it to your GitHub repository
 - Set up automatic deploys from your default branch (or another of your choice).
-- Modify the swagger.json to reference your heroku url instead of localhost and to use https instead of http.
+- Modify the swagger.json to reference your Render url instead of localhost and to use https instead of http.
 - Commit and push this change
-- Test on Heroku until it all works.
+- Test on Render until it all works.
 
 ## Solution
 
