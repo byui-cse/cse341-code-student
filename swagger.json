@@ -1,0 +1,183 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Temple API",
+    "description": "API for managing temples of The Church of Jesus Christ of Latter-day Saints. CSE 341 Project - BYU-Idaho.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Jesus Tortolero"
+    }
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/temples/": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "apiKey",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "temple_id": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "location": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/temples/{temple_id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "temple_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "apiKey",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "temple_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "temple_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Temple": {
+      "type": "object",
+      "properties": {
+        "temple_id": {
+          "type": "string",
+          "example": "SLC"
+        },
+        "name": {
+          "type": "string",
+          "example": "Salt Lake Temple"
+        },
+        "description": {
+          "type": "string",
+          "example": "Main temple in Salt Lake City, Utah"
+        },
+        "location": {
+          "type": "string",
+          "example": "Salt Lake City, Utah, USA"
+        },
+        "dedicated": {
+          "type": "string",
+          "example": "1893-04-06"
+        },
+        "additionalInfo": {
+          "type": "string",
+          "example": "Additional temple information"
+        }
+      }
+    }
+  }
+}
